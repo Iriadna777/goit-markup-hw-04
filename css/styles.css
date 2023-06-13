@@ -180,8 +180,8 @@ body {
   background-position: center;
   background-size: cover;
   background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7) 0%,
-      rgba(46, 47, 66, 0.7) 100%
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
     ),
     url(../images/peopleOffice.jpg);
 }
@@ -257,8 +257,18 @@ body {
 }
 
 .advantages-icon {
+  display: block;
+  gap: 24px;
 }
 .advantages-pic {
+  padding: 24px 100px;
+  align-items: center;
+  justify-content: center;
+  background: #f4f4fd;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  width: 264px;
+  height: 112px;
 }
 
 .advantages-subtitle {
@@ -359,7 +369,7 @@ body {
 .team-soc {
   display: flex;
   gap: 24px;
-  margin-top: 27px;
+  padding-top: 8px;
 }
 .team-soc-item {
 }
@@ -367,6 +377,8 @@ body {
 .team-soc-link {
   border-radius: 50%;
   background-color: #4d5ae5;
+  background-size: 16px;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -417,7 +429,6 @@ body {
 }
 .customers-item {
   display: inline-block;
-  height: 88px;
   width: calc((100% - 120px) / 6);
   color: #8e8f99;
   border: 1px solid #8e8f99;
@@ -437,7 +448,7 @@ body {
 .customers-link:hover,
 .customers-link:focus {
   color: #404bbf;
-  border-color: 1px solid #404bbf;
+  border-color: #404bbf;
 }
 
 .customers-icon {
@@ -512,6 +523,25 @@ body {
 .link {
 }
 
+.project-card-blok {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-subtext-overlay {
+  position: absolute;
+  width: 360px;
+  height: 300px;
+  left: 0px;
+  top: 0px;
+  background: #4d5ae5;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+}
+
 .card-project {
   max-width: 360px;
   padding: 32px 16px;
@@ -566,4 +596,74 @@ body {
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
   max-width: 264px;
+}
+
+.footer-soc {
+}
+.footer-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+.footer-soc-item {
+}
+.footer-soc-link {
+}
+.link {
+}
+.footer-soc-icon {
+}
+
+/*  Modal */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  top: 50%;
+  left: 50%;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal {
+  position: absolute;
+  width: 408px;
+  min-height: 584px;
+  background-color: #fcfcfc;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -43%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -43%) scale(0);
+}
+
+.modal-btn {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  background: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  fill: #2e2f42;
+}
+
+.modal-icon {
 }

@@ -89,8 +89,8 @@
           </ul>
           <ul class="project-list list">
             <li class="project-item">
-              <a href="" class="project-link link"
-                ><img
+              <a href="" class="project-link link">
+                <img
                   src="./images/project1.jpg"
                   alt="image banking app"
                   width="360"
@@ -100,16 +100,23 @@
                     Banking App Interface Concept
                   </h2>
                   <p class="project-item-text">App</p>
-                </div></a
-              >
+                </div>
+              </a>
             </li>
             <li class="project-item">
               <a href="" class="project-link link">
-                <img
-                  src="./images/project2.jpg"
-                  alt="image cashless payment"
-                  width="360"
-                />
+                <div class="project-card-blok">
+                  <img
+                    src="./images/project2.jpg"
+                    alt="image cashless payment"
+                    width="360"
+                  />
+                  <p class="project-subtext-overlay">
+                    14 Stylish and User-Friendly App Design Concepts · Task
+                    Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
+                    App · Cloud Storage App
+                  </p>
+                </div>
                 <div class="card-project">
                   <h2 class="project-subtitle">Cashless Payment</h2>
                   <p class="project-item-text">Marketing</p>
@@ -225,5 +232,15 @@
         </p>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-btn" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/symbol-defs.svg#icon-closeblack"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
